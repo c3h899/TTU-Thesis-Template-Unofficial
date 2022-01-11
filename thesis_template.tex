@@ -1,214 +1,61 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%This documentclass loads the packages  %
-%            setspace                   %
-% and                                   %
-%           fancyhdr.                   %
-%You may have to                        %
-%get these if your TeX distribution     %
-%doesn't have them.                     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{ttuthes2007}
+%Masters Thesis Template---------------------------------
+\input{preamble.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Include any other add-on  packages you need:%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{amsmath,amssymb,amsthm,graphicx}
+%Math Macros/Equations ---------------------------------
+\input{Headers/h_math.tex}
+%-------------------------------------------------------
 
+% Header & Footer --------------------------------------
+\fancyhf{}
+\rhead{\textcolor{gray}{Texas Tech University, \emph{FirstName LastName}, Month YEAR}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+%-------------------------------------------------
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%EDIT  (Running head--  REQUIRED)%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\rhead{\small Texas Tech University, Student-Name, Month-and-year-of-graduation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Uncomment if the grad school doesn't like the%
-%line under the  running head:                %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\renewcommand{\headrulewidth}{0pt}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Spacing -- Do you want double or one-and-a-half?%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\doublespacing
-\onehalfspacing
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Leave the one you want uncommented.                        %
-%In places where single-line-spacing is appropriate         %
-%e.g, extended quotations, you can enclose the material     %
-%in a singlespacing environment (with \begin{singlespacing} %
-% ...  \end{singlespacing}                                  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Other preamble stuff, e.g., theorem environments%
-%or newcommands go here:                         %
-% e.g.                                           %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newtheorem{theorem}{Theorem}
-% \newtheorem{proposition}[theorem]{proposition}
-% \newtheorem{question}{Question}
-% \newtheorem{conjecture}{Conjecture}
-
-
-
+%Text Justification ------------------------------
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+%-------------------------
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%TITLE PAGE -- Edit the spacing commands after each \\ %
-% if necessary                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{titlepage}
-\vbox to  \textheight{
-\begin{singlespacing}
-\begin{center}
-Title-of-Dissertation-or-Thesis\\[15pt]  %Edit
-by\\[15pt]
-Name-of-student, degrees\\[15pt]   %Edit
-A Dissertation\\[15pt]   % or Thesis
-In\\[15pt]
-Mathematics and Statistics\\[10pt]
-Submitted to the Graduate Faculty\\
-of Texas Tech University in\\
-Partial Fulfillment of\\
-the Requirements for the Degree of\\[15pt]
-Doctor of Serenity\\[15pt]  %Edit
-Approved\\[15pt]
-John Doe\\[15pt] %Edit
-Mary Roe\\[15pt] %Edit
-Jane Doe\\[15pt] %Edit
-John Borrelli\\ %Edit
-Dean of the Graduate School\\[15pt]
-May, 2007      %Edit
-\end{center}
-\end{singlespacing}
-\vfill}
-\end{titlepage}
-%%%%%%%%%%%%%%%%%%%
-%End of title page%
-%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Copyright page -- delete or comment out if not needed%
-%usage: \copyrightpage{year of appearance}{Name}      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\copyrightpage{2007}{Student Name} %Name should be same as on
-%title page
-%%%%%%%%%%%%%%%%%%%%%%%%
-%\end of copyright page%
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%
-%Start of frontmatter %
-%You need this:       %
-%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------
 \frontmatter
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Acknowledgements           %
-%Comment out or delete      %
-%if not  wanted             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Acknowledgements}
-I wish to acknowledge the help and support of 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%End of acknowledgements%
-%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%
-%Table of Contents%
-%%%%%%%%%%%%%%%%%%%
-\tableofcontents
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Abstract -- Delete or comment out if not wanted:%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Abstract}
-This dissertation is about ...
-%%%%%%%%%%%%%%%%%
-%End of abstract%
-%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%List of tables and list of figures %
-%Delete or comment out if not needed%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\listoftables
-
-\listoffigures
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%End of lists of tables and figures%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-%MAIN PART OF  DOCUMENT%
-%%%%%%%%%%%%%%%%%%%%%%%%
-
+    \input{Cover/Covermain}
+    
+%---------------------------------------------------
 \mainmatter
-
-
-\chapter{Introduction}
-
-This is the first chapter
-
-\chapter{Another chapter}
-
-Etc.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Backmatter -- Bibliography, appendices, etc.%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \doublespacing
+    %\onehalfspacing
+    %-------------------------------------------------
+%    \chapter{Introduction}
+%    \input{Chapters/Intro}
+    %-------------------------------------------------
+%    \chapter{Background and Literature Review}
+%    \input{Chapters/Ch02}
+    %-------------------------------------------------
+%    \chapter{Simulation Setup and Methods}
+%    \input{Chapters/Ch03}
+    %-------------------------------------------------
+%    \chapter{Results and Discussion}
+%    \input{Chapters/Ch04}
+    %-------------------------------------------------
+%    \chapter{Conclusion and Future Work}
+%    \input{Chapters/Conclusion}
+%---------------------------------------------------
 \backmatter
+\clearpage
 
+\setstretch{1.0}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Bibliography:  Use BibTeX if you like. Here we're just%
-%assuming that you're entering the items directly.     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{thebibliography}{99}
-
-\bibitem{BSS}  L. Blum, M. Shub, and S. Smale, \emph{On a theory of
-computation over the real numbers; NP completeness, recursive
-functions and universal machines}, A.M.S. Bulletin, 1989, v.~21, pp.~1--46. 
-
-
-\end{thebibliography}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%If there's only one appendix, just call it %
-%"Appendix".  Otherwise, use "Appendix A",  %
-%"Appendix B", etc.                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Appendix:  Computer code}
-
-For example, put your computer code here:
-
-\begin{singlespacing}
-\begin{verbatim}
-#include <iostream>
-
-using namespace std;
-
-int main(){
-   cout << "Hello world!\n";
-   return  0;
-}
-\end{verbatim}
-\end{singlespacing}
-
-
-
-
+%\bibliographystyle{ieeetr}
+%\bibliography{Refrences}\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+%\bibliographystyle{ieeetr}
+%\chapter*{\textbf{BIBLIOGRAPHY}}
+\addcontentsline{toc}{chapter}{\textbf{BIBLIOGRAPHY}}
+\singlespacing
+\printbibliography
 \end{document}
-
-
-
-
