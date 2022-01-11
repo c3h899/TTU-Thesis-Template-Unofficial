@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<!-- saved from url=(0049)https://www.math.ttu.edu/~rbyerly/thesistemplate/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Preliminary TTU Thesis Style and Template</title>
+<style>@media print {#ghostery-tracker-tally {display:none !important}}</style></head>
+
+<body>
+<h2 align="center">
+A LaTeX thesis-dissertation style/template for Texas Tech
+</h2>
+
+<p> The Graduate School at Texas Tech has changed their <a href="http://www.depts.ttu.edu/gradschool/current/THDGuidelines.php">
+thesis and  dissertation formatting guidelines</a>. The current LaTeX
+thesis style floating around the department was written in the mid 90s
+and is out of date.  When I taught a course in LaTeX in 2007,
+I decided to revise the thesis style to meet the
+new guidelines.  It has since been successfully used to submit theses and dissertations by a number of people.
+
+</p><p>  If you use this style, I would appreciate knowing about any issues you
+encounter, as well as suggestions for improvement.
+
+</p><p>
+There are some user contributed notes at the end of this page.
+
+
+
+
+</p><h3 align="center">
+Files needed
+</h3>
+You will need to download at least two files (see below). The first
+file is a LaTeX documentclass file called <tt>ttuthes2007.cls</tt>.
+The second file is the actual template  itself:
+<tt>thesis_template.tex</tt>.  This document style uses two
+LaTeX packages which you may or may not have:
+<tt>fancyhdr.sty</tt> and <tt>setspace.sty</tt>.  If you are using
+MiKTeX on a computer on which you have an administrator account, these
+packages will be downloaded and installed automatically for you.
+Otherwise, you may have to download them explicitly.
+
+<h3 align="center">
+Download instructions
+</h3>
+
+<p>Create a working folder for your thesis.  (Creating one on
+your TechDrive is a good choice.)  Download the following files into
+this folder. (You will probably have to right-click on each file.)
+</p><ul>
+<li> <a href="https://www.math.ttu.edu/~rbyerly/thesistemplate/ttuthes2007.cls">ttuthes2007.cls</a> (required!)
+  </li><li> <a href="https://www.math.ttu.edu/~rbyerly/thesistemplate/thesis_template.tex">thesis_template.tex</a> (required!)
+  </li><li> <a href="https://www.math.ttu.edu/~rbyerly/thesistemplate/fancyhdr.sty">fancyhdr.sty</a> (only required if you don't
+  already have this package.)
+  </li><li> <a href="https://www.math.ttu.edu/~rbyerly/thesistemplate/setspace.sty">setspace.sty</a> (only required if you don't
+  already have this package.)
+</li></ul>
+
+<h3 align="center">
+Instructions
+</h3>
+
+<p> You may wish to rename <tt>thesis_template.tex</tt> to something
+like <tt>mythesis.tex</tt>.  This will be the root file for your thesis.
+Open this in your editor or TeXnicCenter and start writing.
+<em>For best results, carefully follow the instructions given as comments.</em>
+
+</p><hr>
+<p><b> User notes:</b><br>
+</p><hr>
+From Roger Coffey:
+<code>
+ I found how to correct the A4 sizing problem using MikTex.  I'm using the
+TeXnicCenter front end and noticed that if I change something like the
+\paperheight to 17.0in, LaTex would send the text off the end of the paper.  It
+appeared that LaTex was working properly but the pages were ending up the A4
+size.
+ <br><br>
+I'm using the compile method of LaTex=&gt;PS=&gt;PDF.  In TeXnicCenter, follow the
+menu path of:  Build-&gt;Define Output Profiles  
+ <br><br>
+Next click the "Postprocessor" tab.  Under "Profiles" I have "LaTex=&gt;PS=&gt;PDF
+selected.  In the adjacent box I have the following lines:
+ <br>
+DviPs (PDF)<br>
+Ghostscript(ps2pdf)
+ <br><br>
+Click on the "Ghostscript(ps2pdf)" line.  For the scripts for "Arguments:"
+change the <br>
+ <br>
+-sPAPERSIZE=a4    to  -sPAPERSIZE=letter
+ 
+ <br><br>
+I'm not sure why these arguments are set this way but they are.  It appears
+that the last Ghostscript step was undoing all of the "Letter" sizing and
+converting it to "A4".<br>
+ <br>
+Now I can go into Adobe, click:<br>
+<br> 
+File-&gt;Document Properties<br>
+ <br>
+...and it shows 8.50 in x 11.00 in<br>
+ 
+Let me know if this is any help. <br>
+ 
+Good Luck!<br>
+ 
+Roger
+</code>
+<hr>
+From Roger Coffey:
+<br>
+<code>
+Here are the other settings that seem to be working for me.
+<br> 
+<br>
+<br>\setlength{\voffset}{0.45in}
+<br>\setlength{\topmargin}{0pt}
+<br>\setlength{\hoffset}{0.35in}
+<br>\setlength{\oddsidemargin}{0pt}
+<br>\setlength{\textwidth}{6.35in}
+<br>\setlength{\textheight}{8.5in}
+<br>
+<br>
+<br></code>
+
+
+
+
+</body></html>
