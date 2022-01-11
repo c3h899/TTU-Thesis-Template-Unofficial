@@ -1,0 +1,43 @@
+% h_math
+
+% TODO:
+% 1) Functions lack proper compatiblity with AMS' limits behaviour
+% superscripts are passed as optional arguments in [], however further
+% development along this path is not possible and not recommended.
+
+\usepackage{amsmath, amssymb, esint, array}
+\usepackage{oplotsymbl}
+
+% Grouping Macros
+\newcommand{\Absolute}[1]{\left|{#1}\right|} % A
+\newcommand{\Angle}[1]{\left\langle{#1}\right\rangle} % G
+\newcommand{\Braces}[1]{\left\{{#1}\right\}} % R
+\newcommand{\Ceil}[1]{\left\lceil{#1}\right\rceil} % C
+\newcommand{\Bracket}[1]{\left[{#1}\right]} % B
+\newcommand{\Floor}[1]{\left\lfloor{#1}\right\rfloor} % F
+\newcommand{\Parenthesis}[1]{\left({#1}\right)} % P
+
+\newcommand{\Abs}[1]{\Absolute{{#1}}} % Alias of Absolute (Value)
+\newcommand{\Group}[1]{\Parenthesis{{#1}}} % Alias of Parenthesis
+
+% Derivatives
+\newcommand{\diff}[2][]{\mathop{\textrm{d}{#2}^{{#1}}}}
+\newcommand{\Diff}[2][]{\mathop{\textrm{D}{#2}^{{#1}}}}
+\newcommand{\Part}[2][]{\mathop{\partial{#2}^{{#1}}}}
+\newcommand{\Fdiff}[2][]{\frac{\diff[{#1}]{}}{\diff[{#1}]{{#2}}}}
+\newcommand{\Fpart}[2][]{\frac{\Part[{#1}]{}}{\Part[{#1}]{{#2}}}}
+
+% Functions
+\newcommand{\Fn}[3][]{\mathop{{#2}^{{#1}}}\!\Parenthesis{{#3}}} % Function Name, Arguments
+\newcommand{\FnTxt}[3][]{\Fn[{#1}]{\text{{#2}}}{#3}} % Function Name as Text, Arguments
+\newcommand{\FnSq}[3][]{\mathop{{#1}^{{#1}}}\!\Braces{{#2}}}
+
+% Transidental Functions
+\newcommand{\Ln}[1]{\ln{\!\Parenthesis{{#1}}}}
+\newcommand{\LnAbs}[1]{\ln{\!\Absolute{{#1}}}}
+\newcommand{\Exp}[1]{\exp{\!\Parenthesis{{#1}}}}
+
+% Triginometric Functions
+\newcommand{\Cos}[2][]{\cos^{{#1}}{\!\Parenthesis{{#2}}}}
+\newcommand{\Sin}[2][]{\sin^{{#1}}{\!\Parenthesis{{#2}}}}
+\newcommand{\Tan}[2][]{\tan^{{#1}}{\!\Parenthesis{{#2}}}}
