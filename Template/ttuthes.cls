@@ -57,7 +57,7 @@
 
 %Table of Contents Manipulation
 \renewcommand*\l@part{\@dottedtocline{0}{0em}{1.5em}}
-\renewcommand*\l@chapter{\setstretch{1.5}\bfseries\@dottedtocline{0}{0em}{1.5em}}
+\renewcommand*\l@chapter{\medskip\setstretch{1.0}\bfseries\@dottedtocline{0}{0em}{1.5em}}
 \renewcommand*\l@section{\setstretch{1.5}\normalfont\@dottedtocline{1}{1.5em}{2.3em}}
 \renewcommand*\l@subsection{\setstretch{1.0}\@dottedtocline{2}{3.8em}{3.2em}}
 
